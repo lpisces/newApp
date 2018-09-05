@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class AdminSeeder extends Seeder
 {
@@ -11,10 +13,14 @@ class AdminSeeder extends Seeder
    */
   public function run()
   {
-	DB::table('users')->insert([
-          'name' => "zebrapool",
-          'email' => 'zebrapool@gmail.com',
-          'password' => bcrypt('zebrapool'),
-    ]);
+		$admin = App\User::create(
+			[
+				'name' => 'admin',
+				'email' => 'admin@admin.com',
+				'password' => bcrypt('123456'),
+			]
+		);
+
+		$admin->assignRole('admin');
   }
 }

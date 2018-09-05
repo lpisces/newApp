@@ -110,8 +110,15 @@ config/auth.php
 `php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"`
 
 
+# migrate
+`
+php artisan migrate
+`
 
-     
+# seed
+`
+php artisan db:seed
+`     
      
  
      
