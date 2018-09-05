@@ -25,7 +25,5 @@ $api->version('v1', function($api) {
 });
 
 $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
-  $api->get('t', function() {
-    return 't';
-  });
+  $api->get('whoami', 'App\Http\Controllers\API\AuthController@me');
 });
