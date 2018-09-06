@@ -26,4 +26,6 @@ $api->version('v1', function($api) {
 
 $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
   $api->get('whoami', 'App\Http\Controllers\API\AuthController@me');
+
+	$api->put('user', 'App\Http\Controllers\API\UserController@store');
 });

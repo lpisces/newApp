@@ -16,5 +16,9 @@ class UserRepository
 		$this->user = $user;
   }
 
-	
+	public function create($data)
+	{
+		return User::create($data);
+	}
+
 }

@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
-class LoginTest extends TestCase
+class AuthControllerTest extends TestCase
 {
     /**
      * login test. expect succeed
